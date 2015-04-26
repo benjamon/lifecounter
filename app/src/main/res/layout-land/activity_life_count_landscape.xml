@@ -1,77 +1,14 @@
-<!--suppress AndroidDomInspection -->
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".lifeCount"
-    android:id="@+id/relayout">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/linlayout"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/b5" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:id="@+id/b6" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-5"
-                android:id="@+id/b7" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+5"
-                android:id="@+id/b8" />
-        </LinearLayout>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/p2"
-            android:text="Player 2" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/p2lives"
-            android:text="20" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout"
-        android:layout_alignTop="@+id/linlayout"
+        android:id="@+id/linearLayout4"
+        android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -84,13 +21,83 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-"
-                android:id="@+id/b1" />
+                android:id="@+id/button"
+                android:layout_weight="1" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+"
-                android:id="@+id/b2" />
+                android:id="@+id/button2"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:text="Player 1"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-5"
+                android:id="@+id/button3"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+5"
+                android:id="@+id/button4"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="73dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText2"
+                android:text="20" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout5"
+        android:layout_alignTop="@+id/linearLayout4"
+        android:layout_toRightOf="@+id/linearLayout4"
+        android:layout_toEndOf="@+id/linearLayout4">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/button5" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:id="@+id/button6" />
+
+            <EditText
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText3"
+                android:text="Player 2" />
         </LinearLayout>
 
         <LinearLayout
@@ -102,27 +109,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-5"
-                android:id="@+id/b3" />
+                android:id="@+id/button7" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+5"
-                android:id="@+id/b4" />
+                android:id="@+id/button8" />
+
+            <EditText
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText4"
+                android:text="20" />
         </LinearLayout>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/p1lbl"
-            android:text="Player 1" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/p1lives"
-            android:layout_gravity="center_horizontal"
-            android:text="20" />
 
     </LinearLayout>
 
@@ -130,8 +130,8 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2"
-        android:layout_below="@+id/linearLayout"
+        android:id="@+id/linearLayout6"
+        android:layout_below="@+id/linearLayout4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -144,13 +144,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-"
-                android:id="@+id/b9" />
+                android:id="@+id/button9" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+"
-                android:id="@+id/b10" />
+                android:id="@+id/button10" />
+
+            <EditText
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText5"
+                android:text="Player 3" />
         </LinearLayout>
 
         <LinearLayout
@@ -162,26 +168,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-5"
-                android:id="@+id/b11" />
+                android:id="@+id/button11" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+5"
-                android:id="@+id/b12" />
+                android:id="@+id/button12" />
+
+            <EditText
+                android:layout_width="116dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText6"
+                android:text="20" />
         </LinearLayout>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/p3"
-            android:text="Player 3" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/p3lives"
-            android:text="20" />
 
     </LinearLayout>
 
@@ -189,10 +189,10 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout3"
-        android:layout_alignTop="@+id/linearLayout2"
-        android:layout_toRightOf="@+id/linearLayout2"
-        android:layout_toEndOf="@+id/linearLayout2">
+        android:id="@+id/linearLayout7"
+        android:layout_alignTop="@+id/linearLayout6"
+        android:layout_alignRight="@+id/linearLayout5"
+        android:layout_alignEnd="@+id/linearLayout5">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -203,13 +203,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-"
-                android:id="@+id/b13" />
+                android:id="@+id/button13" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+"
-                android:id="@+id/b14" />
+                android:id="@+id/button14" />
+
+            <EditText
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText7"
+                android:text="Player 4" />
         </LinearLayout>
 
         <LinearLayout
@@ -221,26 +227,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-5"
-                android:id="@+id/b15" />
+                android:id="@+id/button15" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+5"
-                android:id="@+id/p4u5" />
+                android:id="@+id/button16" />
+
+            <EditText
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText8"
+                android:text="20" />
         </LinearLayout>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/p4"
-            android:text="Player 4" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/p4lives"
-            android:text="20" />
 
     </LinearLayout>
 
@@ -249,10 +249,10 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="LIFE COUNTER"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/textView2"
         android:textIsSelectable="true"
-        android:textSize="48dp" />
+        android:textSize="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
