@@ -11,42 +11,82 @@ import android.widget.TextView;
 
 public class lifeCount extends ActionBarActivity {
 
-    protected int thizint = 10;
-      /*protected TextView p1livesbox = (TextView)findViewById(R.id.p1lives);
-      protected TextView p2livesbox = (TextView)findViewById(R.id.p2lives);
-      protected TextView p3livesbox = (TextView)findViewById(R.id.p3lives);
-      protected TextView p4livesbox = (TextView)findViewById(R.id.p4lives);*/
-
+    int p1number = 20;
+    int p2number = 20;
+    int p3number = 20;
+    int p4number = 20;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_life_count);
-        TextView lifeboxes[] = new TextView[4];
+        final TextView lifeboxes[] = new TextView[4];
 
         lifeboxes[0] = (TextView)findViewById(R.id.p1lives);
         lifeboxes[1] = (TextView)findViewById(R.id.p2lives);
         lifeboxes[2] = (TextView)findViewById(R.id.p3lives);
         lifeboxes[3] = (TextView)findViewById(R.id.p4lives);
-        lifeboxes[3].setText(" " + thizint);
-//        final Button button[] = new Button[16];
-//
-//        for (int i = 1; i < 13; i++) {
-//            int id = getResources().getIdentifier("b"+i, "id", getPackageName());
-//            button[i] = (Button)findViewById(id);
-//        }
-//        applyClick(button);
+        Button button[] = new Button[16];
+        for (int i = 0; i < 16; i++) {
+            int id = getResources().getIdentifier("b"+(i+1), "id", getPackageName());
+            button[i] = (Button)findViewById(id);
+        }
+        applyClick(button, lifeboxes);
     }
 
     //Process buttons
-    public void applyClick(Button[] button) {
-       /* for (int i = 1; i < 13; i++) {
-            button[i].setOnClickListener(
-                    new Button.OnClickListener() {
+    public void applyClick(final Button button[], final TextView texty[]) {
+        for (int i = 0; i < 16; i++) {
+            switch(i) {
+                case 0:case 1:case 2:case 3: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
                         public void onClick(View v) {
-                            p1livesbox.setText(" lives");
+                            int c = getChange(button[3].getText().toString());
+                            int m = Integer.parseInt(texty[0].getText().toString())+c;
+                            texty[0].setText("" + m);
                         }
-                    }
-            );*/
+                    });
+                }
+                break;
+                case 4:case 5:case 6:case 7: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            texty[1].setText("no");
+                        }
+                    });
+                }
+                break;
+                case 8:case 9:case 10:case 11: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            texty[2].setText("maybe");
+                        }
+                    });
+                }
+                break;
+                case 12:case 13:case 14:case 15: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            texty[3].setText("hell naw");
+                        }
+                    });
+                }
+                break;
+            }
+        }
+    }
+
+    protected int getChange(String s) {
+        if (s == "-") {
+            return -1;
+        } else if (s == "+") {
+            return 1;
+        } else if (s == "-5") {
+            return -5;
+        } else if (s == "-") {
+            return 5;
+        } else {
+            return 5;
+        }
     }
 
     @Override
