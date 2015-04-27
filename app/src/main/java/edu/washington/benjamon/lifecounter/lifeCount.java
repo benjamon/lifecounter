@@ -38,7 +38,7 @@ public class lifeCount extends ActionBarActivity {
     public void applyClick(final Button button[], final TextView texty[]) {
         for (int i = 0; i < 16; i++) {
             switch(i) {
-                case 0:case 1:case 2:case 3: {
+                case 0: {
                     button[i].setOnClickListener(new Button.OnClickListener() {
                         public void onClick(View v) {
                             int c = getChange(button[0].getText().toString());
@@ -51,7 +51,46 @@ public class lifeCount extends ActionBarActivity {
                     });
                 }
                 break;
-                case 4:case 5:case 6:case 7: {
+                case 1: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[1].getText().toString());
+                            int m = Integer.parseInt(texty[0].getText().toString())+c;
+                            texty[0].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 1 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 2: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[2].getText().toString());
+                            int m = Integer.parseInt(texty[0].getText().toString())+c;
+                            texty[0].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 1 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 3: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[3].getText().toString());
+                            int m = Integer.parseInt(texty[0].getText().toString())+c;
+                            texty[0].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 1 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 4: {
                     button[i].setOnClickListener(new Button.OnClickListener() {
                         public void onClick(View v) {
                             int c = getChange(button[0].getText().toString());
@@ -64,7 +103,46 @@ public class lifeCount extends ActionBarActivity {
                     });
                 }
                 break;
-                case 8:case 9:case 10:case 11: {
+                case 5: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[1].getText().toString());
+                            int m = Integer.parseInt(texty[1].getText().toString())+c;
+                            texty[1].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 2 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 6: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[2].getText().toString());
+                            int m = Integer.parseInt(texty[1].getText().toString())+c;
+                            texty[1].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 2 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 7: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[3].getText().toString());
+                            int m = Integer.parseInt(texty[1].getText().toString())+c;
+                            texty[1].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 2 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 8: {
                     button[i].setOnClickListener(new Button.OnClickListener() {
                         public void onClick(View v) {
                             int c = getChange(button[0].getText().toString());
@@ -77,10 +155,88 @@ public class lifeCount extends ActionBarActivity {
                     });
                 }
                 break;
-                case 12:case 13:case 14:case 15: {
+                case 9: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[1].getText().toString());
+                            int m = Integer.parseInt(texty[2].getText().toString())+c;
+                            texty[2].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 3 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 10: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[2].getText().toString());
+                            int m = Integer.parseInt(texty[2].getText().toString())+c;
+                            texty[2].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 3 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 11: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[3].getText().toString());
+                            int m = Integer.parseInt(texty[2].getText().toString())+c;
+                            texty[2].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 3 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 12: {
                     button[i].setOnClickListener(new Button.OnClickListener() {
                         public void onClick(View v) {
                             int c = getChange(button[0].getText().toString());
+                            int m = Integer.parseInt(texty[3].getText().toString())+c;
+                            texty[3].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 4 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 13: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[1].getText().toString());
+                            int m = Integer.parseInt(texty[3].getText().toString())+c;
+                            texty[3].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 4 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 14: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[2].getText().toString());
+                            int m = Integer.parseInt(texty[3].getText().toString())+c;
+                            texty[3].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 4 Loses!", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                break;
+                case 15: {
+                    button[i].setOnClickListener(new Button.OnClickListener() {
+                        public void onClick(View v) {
+                            int c = getChange(button[3].getText().toString());
                             int m = Integer.parseInt(texty[3].getText().toString())+c;
                             texty[3].setText("" + m);
                             if (m <= 0) {
