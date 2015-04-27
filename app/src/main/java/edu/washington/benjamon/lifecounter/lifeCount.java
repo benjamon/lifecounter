@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 public class lifeCount extends ActionBarActivity {
 
@@ -15,6 +15,7 @@ public class lifeCount extends ActionBarActivity {
     int p2number = 20;
     int p3number = 20;
     int p4number = 20;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +41,12 @@ public class lifeCount extends ActionBarActivity {
                 case 0:case 1:case 2:case 3: {
                     button[i].setOnClickListener(new Button.OnClickListener() {
                         public void onClick(View v) {
-                            int c = getChange(button[3].getText().toString());
+                            int c = getChange(button[0].getText().toString());
                             int m = Integer.parseInt(texty[0].getText().toString())+c;
                             texty[0].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 1 Loses!", Toast.LENGTH_LONG).show();
+                            }
                         }
                     });
                 }
@@ -50,7 +54,12 @@ public class lifeCount extends ActionBarActivity {
                 case 4:case 5:case 6:case 7: {
                     button[i].setOnClickListener(new Button.OnClickListener() {
                         public void onClick(View v) {
-                            texty[1].setText("no");
+                            int c = getChange(button[0].getText().toString());
+                            int m = Integer.parseInt(texty[1].getText().toString())+c;
+                            texty[1].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 2 Loses!", Toast.LENGTH_LONG).show();
+                            }
                         }
                     });
                 }
@@ -58,7 +67,12 @@ public class lifeCount extends ActionBarActivity {
                 case 8:case 9:case 10:case 11: {
                     button[i].setOnClickListener(new Button.OnClickListener() {
                         public void onClick(View v) {
-                            texty[2].setText("maybe");
+                            int c = getChange(button[0].getText().toString());
+                            int m = Integer.parseInt(texty[2].getText().toString())+c;
+                            texty[2].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 3 Loses!", Toast.LENGTH_LONG).show();
+                            }
                         }
                     });
                 }
@@ -66,7 +80,12 @@ public class lifeCount extends ActionBarActivity {
                 case 12:case 13:case 14:case 15: {
                     button[i].setOnClickListener(new Button.OnClickListener() {
                         public void onClick(View v) {
-                            texty[3].setText("hell naw");
+                            int c = getChange(button[0].getText().toString());
+                            int m = Integer.parseInt(texty[3].getText().toString())+c;
+                            texty[3].setText("" + m);
+                            if (m <= 0) {
+                                Toast.makeText(getApplicationContext(), "Player 4 Loses!", Toast.LENGTH_LONG).show();
+                            }
                         }
                     });
                 }
@@ -75,17 +94,17 @@ public class lifeCount extends ActionBarActivity {
         }
     }
 
-    protected int getChange(String s) {
-        if (s == "-") {
+    public int getChange(String s) {
+        if (s.equals("-")) {
             return -1;
-        } else if (s == "+") {
+        } else if (s.equals("+")) {
             return 1;
-        } else if (s == "-5") {
+        } else if (s.equals("-5")) {
             return -5;
-        } else if (s == "-") {
+        } else if (s.equals("+5")) {
             return 5;
         } else {
-            return 5;
+            return 2;
         }
     }
 
